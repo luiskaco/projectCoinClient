@@ -65,14 +65,14 @@ const NewRegister = () => {
         }),
         onSubmit: data => {
             const {
-                nombre : username,
                 password, 
                 apellido:fname, 
                 phone, 
                 address ,
                 country:country_code, 
                 nombre:lname,  
-                birth:birthdate 
+                birth:birthdate,
+                username
             } = data;
 
          
@@ -92,11 +92,13 @@ const NewRegister = () => {
 
         const LoginVerify = async data => {
             try {
+
+             
                 const resultado = await clientAxios.post('/api/usuario', data);
                  console.log(resultado.data)
         
                 // Redireccionar
-                navigate('/login')
+                navigate('/')
 
             } catch (error) {
                 console.log(error)

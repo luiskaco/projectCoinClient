@@ -118,9 +118,7 @@ const Login =  () => {
                                <Link to={'/nueva'}  className="link-secondary d-block">
                                     Obtener Cuenta
                                 </Link>
-                                <Link to={'/principal'}  className="link-secondary">
-                                    principal
-                                </Link>
+                           
                                                         
                             </div>
                       </form>
